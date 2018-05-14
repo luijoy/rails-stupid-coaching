@@ -1,0 +1,19 @@
+<h1>QuestionsController#answer</h1>
+
+<% if @question == 'I am going to work' %>
+  <%= @question %>
+  <p>- You </p>
+  <p><strong>"Great!"</strong></p>
+  <p>- Your coach</p>
+<% elsif @question.include?('?') %>
+  <%= @question %>
+  <p>- You </p>
+  <p><strong>"Silly question, get dressed and go to work!"</strong></p>
+  <p>- Your coach</p>
+<% else %>
+  <%= @question %>
+  <p>- You </p>
+  <p><strong>"I don't care, get dressed and go to work!"</strong></p>
+  <p>- Your coach</p>
+<% end %>
+<%= link_to 'Ask a new question', ask_path %>
